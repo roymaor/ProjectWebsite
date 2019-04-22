@@ -17,23 +17,23 @@ namespace MODEL
         private Cities cities;
         private AreaCodes areaCodes;
         private Roles roles;
-        private MyServiceClient client;
+        private MyServiceClient serviceClient;
 
         private CustomersDB customersDB;
        
         public Customers()
         {
             customersDB = new CustomersDB();
-            client = new MyServiceClient();
+            serviceClient = new MyServiceClient();
         }
 
         #region Select methods
 
         public void SelectAll()
 
-        {   roles= client.SelectAllRoles();
-            areaCodes = client.SelectAllAreaCodes();
-            cities = client.SelectAllCities();
+        {   roles= serviceClient.SelectAllRoles();
+            areaCodes = serviceClient.SelectAllAreaCodes();
+            cities = serviceClient.SelectAllCities();
             customersDB.SelectAllCustomers();
             AddRange(customersDB.customers);
             foreach (Customer m in this)
@@ -42,9 +42,9 @@ namespace MODEL
 
         public void SelectCustomerByNum(int num)
         {
-             roles= client.SelectAllRoles();
-            areaCodes = client.SelectAllAreaCodes();
-            cities = client.SelectAllCities();
+             roles= serviceClient.SelectAllRoles();
+            areaCodes = serviceClient.SelectAllAreaCodes();
+            cities = serviceClient.SelectAllCities();
             customersDB.SelectCustomerByNum(num);
             AddRange(customersDB.customers);
             foreach (Customer m in this)
