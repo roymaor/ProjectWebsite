@@ -1,0 +1,11 @@
+C:\Users\User\Desktop\FootLocker_ROEI\WEB_VIEW_MODEL_TASHTIT\BLL\bin\Debug\BLL.dll
+C:\Users\User\Desktop\FootLocker_ROEI\WEB_VIEW_MODEL_TASHTIT\BLL\bin\Debug\BLL.pdb
+C:\Users\User\Desktop\FootLocker_ROEI\WEB_VIEW_MODEL_TASHTIT\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\FootLocker_ROEI\WEB_VIEW_MODEL_TASHTIT\BLL\obj\Debug\BLL.dll
+C:\Users\User\Desktop\FootLocker_ROEI\WEB_VIEW_MODEL_TASHTIT\BLL\obj\Debug\BLL.pdb
+C:\Users\roy\Downloads\FootLocker_ROEI\FootLocker_ROEI\WEB_VIEW_MODEL_TASHTIT\BLL\bin\Debug\BLL.dll
+C:\Users\roy\Downloads\FootLocker_ROEI\FootLocker_ROEI\WEB_VIEW_MODEL_TASHTIT\BLL\bin\Debug\BLL.pdb
+C:\Users\roy\Downloads\FootLocker_ROEI\FootLocker_ROEI\WEB_VIEW_MODEL_TASHTIT\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\roy\Downloads\FootLocker_ROEI\FootLocker_ROEI\WEB_VIEW_MODEL_TASHTIT\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\roy\Downloads\FootLocker_ROEI\FootLocker_ROEI\WEB_VIEW_MODEL_TASHTIT\BLL\obj\Debug\BLL.dll
+C:\Users\roy\Downloads\FootLocker_ROEI\FootLocker_ROEI\WEB_VIEW_MODEL_TASHTIT\BLL\obj\Debug\BLL.pdb

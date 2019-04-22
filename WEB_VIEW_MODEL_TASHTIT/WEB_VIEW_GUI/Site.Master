@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WEB_VIEW_GUI.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="Style/SiteStyleSheet.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../../Global_functions.js" charset="Windows-1255"></script>
+</head>
+<body dir="rtl">
+    <form id="form1" runat="server">
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+
+        <div id="divHeader">
+            <asp:Image ImageUrl="Images/SeaShore.jpg" runat="server" Width="100%" Height="100%" />
+        </div>
+
+        <div id="divLogin">
+            <table id="userTable">
+                <tr>
+                    <td>שם משתמש</td>
+                    <td>סיסמא</td>
+                    <td>&nbsp;&nbsp;<asp:LinkButton ID="lnkLogin" Text="כניסה" runat="server" ForeColor="White" OnClick="lnkLogin_Click" />&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><asp:TextBox ID="txtUserName" runat="server" Width="100" /></td>
+                    <td><asp:TextBox ID="txtPassword" runat="server" Width="100" /></td>
+                    <td>&nbsp;&nbsp;<asp:LinkButton ID="lnkLogout" Text="יציאה" runat="server" ForeColor="White" PostBackUrl="~/frmLogOut.aspx" />&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="divMenu">
+            <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1"
+ 	                             Orientation="Horizontal" StaticDisplayLevels="2" Font-Bold="True"
+ 	                             Width="100%" CssClass="menu" IncludeStyleBlock="false"
+ 	                             EnableViewState="false" BackColor="#465c71" />
+        </div>
+
+        <div id="divSiteMapPath">
+            <asp:SiteMapPath ID="SiteMapPath1" Runat="server" PathSeparator=" / " 
+					 EnableViewState="false">
+            </asp:SiteMapPath> 
+        </div>
+
+        <div id="divContent">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

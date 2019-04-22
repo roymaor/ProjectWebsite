@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Default.aspx" title="דף הבית"  description="" roles="*" >
+    <siteMapNode title="דף מנהל" url="~/Users/Admin/frmAdmin.aspx" roles="ADMIN" />
+    <siteMapNode title="דף משתמש" url="~/Users/AuthUser/frmAuthUser.aspx" roles="ADMIN,AUTHUSER" />
+    <siteMapNode title="טבלאות מערכת">
+      <siteMapNode url="~/Users/Admin/SystemTables/frmCities.aspx" title="טבלת ישובים" roles="ADMIN" />
+      <siteMapNode url="~/Users/Admin/SystemTables/frmAreaCodes.aspx" title="טבלת אזורי חיוג" roles="ADMIN" />
+      <siteMapNode url="~/Users/Admin/SystemTables/frmBrands.aspx" title="טבלת מותגים" roles="ADMIN" />
+      <siteMapNode url="~/Users/Admin/SystemTables/frmCategories.aspx" title="טבלת קטגוריות" roles="ADMIN" />
+      <siteMapNode url="~/Users/Admin/SystemTables/frmRoles.aspx" title="טבלת תפקידים" roles="ADMIN" />
+      <siteMapNode url="~/Users/Admin/SystemTables/frmSizes.aspx" title="טבלת גדלים" roles="ADMIN" />
+      <siteMapNode title="&lt;hr size='1' witdt='100%'&gt;&lt;/hr&gt;"  />
+    </siteMapNode>
+    <siteMapNode url="~/F_Info/frmAbout.aspx" title="אודות"  description="" roles="*" />
+    <siteMapNode url="~/F_Info/frmContactUs.aspx" title="צור קשר"  description="" roles="*" />
+    <siteMapNode url="~/frmLogin.aspx" title="כניסה"  description="" roles="*" />
+  </siteMapNode>
+</siteMap>

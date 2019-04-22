@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MyService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:57674/MyService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:57674/MyService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:57674/MyService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MODEL" />
+      <xsd:import schemaLocation="http://localhost:57674/MyService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/HELPER" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMyService_SelectAllCities_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllCities" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_SelectAllCities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllCitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_AddCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCity" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_AddCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_ModifyCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyCity" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_ModifyCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_DeleteCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCity" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_DeleteCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_SelectAllAreaCodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllAreaCodes" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_SelectAllAreaCodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllAreaCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_AddAreaCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAreaCode" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_AddAreaCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAreaCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_ModifyAreaCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyAreaCode" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_ModifyAreaCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyAreaCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_DeleteAreaCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAreaCode" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_DeleteAreaCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAreaCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_SelectAllBrands_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllBrands" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_SelectAllBrands_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllBrandsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_AddBrand_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBrand" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_AddBrand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_ModifyBrand_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyBrand" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_ModifyBrand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_DeleteBrand_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBrand" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_DeleteBrand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_SelectAllCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllCategories" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_SelectAllCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_AddCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCategory" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_AddCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_ModifyCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyCategory" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_ModifyCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_DeleteCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCategory" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_DeleteCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_SelectAllRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllRoles" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_SelectAllRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_AddRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRole" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_AddRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_ModifyRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyRole" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_ModifyRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_DeleteRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRole" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_DeleteRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_SelectAllSizes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllSizes" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_SelectAllSizes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllSizesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_AddSize_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSize" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_AddSize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_ModifySize_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifySize" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_ModifySize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifySizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_DeleteSize_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSize" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_DeleteSize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSizeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMyService">
+    <wsdl:operation name="SelectAllCities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/SelectAllCities" message="tns:IMyService_SelectAllCities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/SelectAllCitiesResponse" message="tns:IMyService_SelectAllCities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/AddCity" message="tns:IMyService_AddCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/AddCityResponse" message="tns:IMyService_AddCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/ModifyCity" message="tns:IMyService_ModifyCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/ModifyCityResponse" message="tns:IMyService_ModifyCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/DeleteCity" message="tns:IMyService_DeleteCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/DeleteCityResponse" message="tns:IMyService_DeleteCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllAreaCodes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/SelectAllAreaCodes" message="tns:IMyService_SelectAllAreaCodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/SelectAllAreaCodesResponse" message="tns:IMyService_SelectAllAreaCodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAreaCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/AddAreaCode" message="tns:IMyService_AddAreaCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/AddAreaCodeResponse" message="tns:IMyService_AddAreaCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAreaCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/ModifyAreaCode" message="tns:IMyService_ModifyAreaCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/ModifyAreaCodeResponse" message="tns:IMyService_ModifyAreaCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAreaCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/DeleteAreaCode" message="tns:IMyService_DeleteAreaCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/DeleteAreaCodeResponse" message="tns:IMyService_DeleteAreaCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllBrands">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/SelectAllBrands" message="tns:IMyService_SelectAllBrands_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/SelectAllBrandsResponse" message="tns:IMyService_SelectAllBrands_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBrand">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/AddBrand" message="tns:IMyService_AddBrand_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/AddBrandResponse" message="tns:IMyService_AddBrand_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyBrand">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/ModifyBrand" message="tns:IMyService_ModifyBrand_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/ModifyBrandResponse" message="tns:IMyService_ModifyBrand_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBrand">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/DeleteBrand" message="tns:IMyService_DeleteBrand_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/DeleteBrandResponse" message="tns:IMyService_DeleteBrand_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/SelectAllCategories" message="tns:IMyService_SelectAllCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/SelectAllCategoriesResponse" message="tns:IMyService_SelectAllCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/AddCategory" message="tns:IMyService_AddCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/AddCategoryResponse" message="tns:IMyService_AddCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/ModifyCategory" message="tns:IMyService_ModifyCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/ModifyCategoryResponse" message="tns:IMyService_ModifyCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/DeleteCategory" message="tns:IMyService_DeleteCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/DeleteCategoryResponse" message="tns:IMyService_DeleteCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/SelectAllRoles" message="tns:IMyService_SelectAllRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/SelectAllRolesResponse" message="tns:IMyService_SelectAllRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/AddRole" message="tns:IMyService_AddRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/AddRoleResponse" message="tns:IMyService_AddRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/ModifyRole" message="tns:IMyService_ModifyRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/ModifyRoleResponse" message="tns:IMyService_ModifyRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/DeleteRole" message="tns:IMyService_DeleteRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/DeleteRoleResponse" message="tns:IMyService_DeleteRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllSizes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/SelectAllSizes" message="tns:IMyService_SelectAllSizes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/SelectAllSizesResponse" message="tns:IMyService_SelectAllSizes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSize">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/AddSize" message="tns:IMyService_AddSize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/AddSizeResponse" message="tns:IMyService_AddSize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifySize">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/ModifySize" message="tns:IMyService_ModifySize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/ModifySizeResponse" message="tns:IMyService_ModifySize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSize">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/DeleteSize" message="tns:IMyService_DeleteSize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/DeleteSizeResponse" message="tns:IMyService_DeleteSize_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMyService" type="tns:IMyService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectAllCities">
+      <soap:operation soapAction="http://tempuri.org/IMyService/SelectAllCities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCity">
+      <soap:operation soapAction="http://tempuri.org/IMyService/AddCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyCity">
+      <soap:operation soapAction="http://tempuri.org/IMyService/ModifyCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCity">
+      <soap:operation soapAction="http://tempuri.org/IMyService/DeleteCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllAreaCodes">
+      <soap:operation soapAction="http://tempuri.org/IMyService/SelectAllAreaCodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAreaCode">
+      <soap:operation soapAction="http://tempuri.org/IMyService/AddAreaCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAreaCode">
+      <soap:operation soapAction="http://tempuri.org/IMyService/ModifyAreaCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAreaCode">
+      <soap:operation soapAction="http://tempuri.org/IMyService/DeleteAreaCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllBrands">
+      <soap:operation soapAction="http://tempuri.org/IMyService/SelectAllBrands" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBrand">
+      <soap:operation soapAction="http://tempuri.org/IMyService/AddBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyBrand">
+      <soap:operation soapAction="http://tempuri.org/IMyService/ModifyBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBrand">
+      <soap:operation soapAction="http://tempuri.org/IMyService/DeleteBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllCategories">
+      <soap:operation soapAction="http://tempuri.org/IMyService/SelectAllCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCategory">
+      <soap:operation soapAction="http://tempuri.org/IMyService/AddCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyCategory">
+      <soap:operation soapAction="http://tempuri.org/IMyService/ModifyCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCategory">
+      <soap:operation soapAction="http://tempuri.org/IMyService/DeleteCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllRoles">
+      <soap:operation soapAction="http://tempuri.org/IMyService/SelectAllRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRole">
+      <soap:operation soapAction="http://tempuri.org/IMyService/AddRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyRole">
+      <soap:operation soapAction="http://tempuri.org/IMyService/ModifyRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <soap:operation soapAction="http://tempuri.org/IMyService/DeleteRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllSizes">
+      <soap:operation soapAction="http://tempuri.org/IMyService/SelectAllSizes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSize">
+      <soap:operation soapAction="http://tempuri.org/IMyService/AddSize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifySize">
+      <soap:operation soapAction="http://tempuri.org/IMyService/ModifySize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSize">
+      <soap:operation soapAction="http://tempuri.org/IMyService/DeleteSize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MyService">
+    <wsdl:port name="BasicHttpBinding_IMyService" binding="tns:BasicHttpBinding_IMyService">
+      <soap:address location="http://localhost:57674/MyService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

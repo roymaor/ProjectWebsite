@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MODEL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MODEL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57674/MyService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/HELPER" />
+  <xs:import schemaLocation="http://localhost:57674/MyService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Cities">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="City" nillable="true" type="tns:City" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cities" nillable="true" type="tns:Cities" />
+  <xs:complexType name="City">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="City" nillable="true" type="tns:City" />
+  <xs:complexType name="BaseEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EntityStatus" type="tns:EntityStatus" />
+      <xs:element minOccurs="0" name="Num" type="xs:int" />
+      <xs:element minOccurs="0" name="checkValidation" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/HELPER" minOccurs="0" name="status" type="q1:ErrorStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseEntity" nillable="true" type="tns:BaseEntity" />
+  <xs:simpleType name="EntityStatus">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Added">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Modified">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Deleted">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Unchanged">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="EntityStatus" nillable="true" type="tns:EntityStatus" />
+  <xs:complexType name="BaseListOfCityE4cssQnl">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseListOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MODEL" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="City" Namespace="http://schemas.datacontract.org/2004/07/MODEL" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="City" nillable="true" type="tns:City" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseListOfCityE4cssQnl" nillable="true" type="tns:BaseListOfCityE4cssQnl" />
+  <xs:complexType name="AreaCodes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AreaCode" nillable="true" type="tns:AreaCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AreaCodes" nillable="true" type="tns:AreaCodes" />
+  <xs:complexType name="AreaCode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AreaCode" nillable="true" type="tns:AreaCode" />
+  <xs:complexType name="BaseListOfAreaCodeE4cssQnl">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseListOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MODEL" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AreaCode" Namespace="http://schemas.datacontract.org/2004/07/MODEL" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AreaCode" nillable="true" type="tns:AreaCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseListOfAreaCodeE4cssQnl" nillable="true" type="tns:BaseListOfAreaCodeE4cssQnl" />
+  <xs:complexType name="Brands">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Brand" nillable="true" type="tns:Brand" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Brands" nillable="true" type="tns:Brands" />
+  <xs:complexType name="Brand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Brand" nillable="true" type="tns:Brand" />
+  <xs:complexType name="BaseListOfBrandE4cssQnl">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseListOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MODEL" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Brand" Namespace="http://schemas.datacontract.org/2004/07/MODEL" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Brand" nillable="true" type="tns:Brand" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseListOfBrandE4cssQnl" nillable="true" type="tns:BaseListOfBrandE4cssQnl" />
+  <xs:complexType name="Categories">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Category" nillable="true" type="tns:Category" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Categories" nillable="true" type="tns:Categories" />
+  <xs:complexType name="Category">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Category" nillable="true" type="tns:Category" />
+  <xs:complexType name="BaseListOfCategoryE4cssQnl">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseListOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MODEL" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Category" Namespace="http://schemas.datacontract.org/2004/07/MODEL" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Category" nillable="true" type="tns:Category" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseListOfCategoryE4cssQnl" nillable="true" type="tns:BaseListOfCategoryE4cssQnl" />
+  <xs:complexType name="Roles">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Role" nillable="true" type="tns:Role" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Roles" nillable="true" type="tns:Roles" />
+  <xs:complexType name="Role">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Role" nillable="true" type="tns:Role" />
+  <xs:complexType name="BaseListOfRoleE4cssQnl">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseListOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MODEL" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Role" Namespace="http://schemas.datacontract.org/2004/07/MODEL" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Role" nillable="true" type="tns:Role" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseListOfRoleE4cssQnl" nillable="true" type="tns:BaseListOfRoleE4cssQnl" />
+  <xs:complexType name="Sizes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Size" nillable="true" type="tns:Size" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sizes" nillable="true" type="tns:Sizes" />
+  <xs:complexType name="Size">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Size" nillable="true" type="tns:Size" />
+  <xs:complexType name="BaseListOfSizeE4cssQnl">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseListOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MODEL" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Size" Namespace="http://schemas.datacontract.org/2004/07/MODEL" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Size" nillable="true" type="tns:Size" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseListOfSizeE4cssQnl" nillable="true" type="tns:BaseListOfSizeE4cssQnl" />
+</xs:schema>

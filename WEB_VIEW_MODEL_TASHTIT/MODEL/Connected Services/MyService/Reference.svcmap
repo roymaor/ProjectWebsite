@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="97543799-b0b6-4b39-a52b-37b9555bbde9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:57674/MyService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MyService.xsd" MetadataType="Schema" ID="538f1198-8f5f-441e-b979-c221c89c26b9" SourceId="1" SourceUrl="http://localhost:57674/MyService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MyService1.xsd" MetadataType="Schema" ID="85a89699-2876-4c11-831e-184d06a2dd96" SourceId="1" SourceUrl="http://localhost:57674/MyService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MyService2.xsd" MetadataType="Schema" ID="385c0f06-ff34-40ba-b79a-f29d73ea6004" SourceId="1" SourceUrl="http://localhost:57674/MyService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MyService.wsdl" MetadataType="Wsdl" ID="ddef4499-261b-4522-811d-649e561d809d" SourceId="1" SourceUrl="http://localhost:57674/MyService.svc?wsdl" />
+    <MetadataFile FileName="MyService.disco" MetadataType="Disco" ID="e93da640-19fc-4104-afd7-56463ba33e85" SourceId="1" SourceUrl="http://localhost:57674/MyService.svc?disco" />
+    <MetadataFile FileName="MyService3.xsd" MetadataType="Schema" ID="b474c7d1-03ee-42db-8630-1565c2321db9" SourceId="1" SourceUrl="http://localhost:57674/MyService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
